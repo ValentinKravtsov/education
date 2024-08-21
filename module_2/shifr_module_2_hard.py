@@ -24,4 +24,4 @@ numbers_answer = []
 for list_numbers in list_numbers_answer:
     numbers_answer.append(''.join(map(str, list_numbers)))
 
-print(int(''.join(numbers_answer)))
+print('Ответ: ', int(''.join(numbers_answer)))
