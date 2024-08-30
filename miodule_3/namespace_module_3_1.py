@@ -13,8 +13,7 @@ def is_contains(word_2, list_to_search):
     for i in list_to_search:
         if word_2.lower() == i.lower():
             return True
-        else:
-            return False
+    return False
 
 
 calls = 0
