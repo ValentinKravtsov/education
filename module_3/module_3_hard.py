@@ -1,6 +1,8 @@
 def calculate_structure_sum(data, count=0):
     if isinstance(data, int):
         return data
+    if isinstance(data, str):
+        return len(data)
     for i in data:
         if isinstance(i, list) or isinstance(i, tuple) or isinstance(i, set):
             if len(i) == 0:
