@@ -23,4 +23,3 @@ elif score_1 < score_2 or score_1 == score_2 and team1_time < team2_time:
     print(f"Результат битвы: победа команды {team1}!")
 else:
     print('Ничья!')
-
