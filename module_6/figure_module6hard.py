@@ -30,10 +30,7 @@ class Figure:
 
     def __is_valid_sides(self, sides):
         if len(sides) == self.sides_count:
-            array_ = []
-            for i in sides:
-                array_.append(i)
-            return array_
+            return list(sides)
         elif len(sides) == 1:
             return [sides[0]] * self.sides_count
 
