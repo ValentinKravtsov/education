@@ -20,7 +20,7 @@ class Bank:
         for i in range(100):
             count = random.randint(50, 500)
             print(f'Запрос на: {count}')
-            if count <= self.balance:
+            if count <= self.balance and not self.lock.locked():
                 self.balance -= count
                 print(f'Снятие: {count}. Баланс: {self.balance}')
             else:
