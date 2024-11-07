@@ -49,7 +49,6 @@ class Cafe:
                     table.guest.start()
                 table_free += 1
             if table_free == len(self.tables):
-                print(table_free)
                 print('Гостей в очереди нет, столы свободны')
                 key = False
 
