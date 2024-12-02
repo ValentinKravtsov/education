@@ -2,6 +2,24 @@ import calc
 import unittest
 
 class CalcTest(unittest.TestCase):
+    # запуск перед каждым тест-кейсом
+    def setUp(self):
+        print('setup')
+
+    # запуск ОДИН раз перед всеми тест-кейсами
+    @classmethod
+    def setUpClass(cls):
+        print('MegaSetup')
+
+    # запуск после каждого тест-кейса
+    def tearDown(self):
+        pass
+
+    # запуск ОДИН раз после всех тест-кейсов
+    @classmethod
+    def tearDownClass(cls):
+        pass
+
     def test_add(self):
         """
         Test for add function in calculator
