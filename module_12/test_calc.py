@@ -4,12 +4,12 @@ import unittest
 class CalcTest(unittest.TestCase):
     # запуск перед каждым тест-кейсом
     def setUp(self):
-        print('setup')
+        pass
 
     # запуск ОДИН раз перед всеми тест-кейсами
     @classmethod
     def setUpClass(cls):
-        print('MegaSetup')
+        pass
 
     # запуск после каждого тест-кейса
     def tearDown(self):
