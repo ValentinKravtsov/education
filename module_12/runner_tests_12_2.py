@@ -3,33 +3,40 @@ import unittest
 
 
 class TournamentTest(unittest.TestCase):
+    is_frozen = True
+
     @classmethod
     def setUpClass(cls):
         cls.all_results = {}
 
+    @unittest.skipIf(is_frozen, 'Тесты в этом кейсе заморожены')
     def setUp(self):
         self.runner_usain = runner_2.Runner('Usain', 10)
         self.runner_andrew = runner_2.Runner('Andrew', 9)
         self.runner_nick = runner_2.Runner('Nick', 3)
 
+    @unittest.skipIf(is_frozen, 'Тесты в этом кейсе заморожены')
     def test_race_1(self):
         race = runner_2.Tournament(90, self.runner_usain, self.runner_nick)
         self.__class__.all_results[1] = race.start()
         last_runner = self.__class__.all_results[max(self.__class__.all_results.keys())]
         self.assertTrue(last_runner[list(last_runner.keys())[-1]] == self.runner_nick)
 
+    @unittest.skipIf(is_frozen, 'Тесты в этом кейсе заморожены')
     def test_race_2(self):
         race = runner_2.Tournament(90, self.runner_andrew, self.runner_nick)
         self.__class__.all_results[2] = race.start()
         last_runner = self.__class__.all_results[max(self.__class__.all_results.keys())]
         self.assertTrue(last_runner[list(last_runner.keys())[-1]] == self.runner_nick)
 
+    @unittest.skipIf(is_frozen, 'Тесты в этом кейсе заморожены')
     def test_race_3(self):
         tournament = runner_2.Tournament(90, self.runner_usain, self.runner_andrew, self.runner_nick)
         self.__class__.all_results[3] = tournament.start()
         last_race = self.__class__.all_results[max(self.__class__.all_results.keys())]
         self.assertTrue(last_race[list(last_race.keys())[-1]] == self.runner_nick)
 
+    @unittest.skipIf(is_frozen, 'Тесты в этом кейсе заморожены')
     def test_speed_order(self):
         # Меняем дистанцию на 50 и меняем очерёдность бегунов
         tournament = runner_2.Tournament(50, self.runner_usain, self.runner_nick, self.runner_andrew)
